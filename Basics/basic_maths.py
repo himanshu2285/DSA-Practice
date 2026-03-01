@@ -120,3 +120,19 @@ class SolutionPrime2:
         return count == 0
 obj = SolutionPrime2()
 print(obj.isPrime(32))
+
+
+# 7. GCD of two numbers(Euclidean Algorithm)
+class Solution_GCD:
+    def gcd(self, a: int, b: int) -> int:
+        while(a>0 and b>0):
+            if a>b:
+                a = a % b
+            else:
+                b = b % a
+        if a == 0:
+            print("GCD:",b)
+        else:
+            print("GCD:",a)
+obj = Solution_GCD()
+obj.gcd(17,51)
