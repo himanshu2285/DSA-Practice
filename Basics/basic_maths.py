@@ -10,7 +10,7 @@ class Solution_DigitsCount:
             count += 1
         return count
 obj = Solution_DigitsCount()
-print(obj.countDigits(110))
+print(obj.countDigits(-10001))
 
 
 # 2. Reverse a number
@@ -93,3 +93,30 @@ class Solution_Divisors2:
 obj = Solution_Divisors2()
 print(obj.printDivisors(36))
 # Time Complexity = O(sqrt(N))
+
+
+# 6. Check Prime Number 
+# 1st approach
+class Solution_prime:
+    def isPrime(self, n: int) -> bool:
+        if n <= 1:
+            return False
+        for i in range(2, int(sqrt(n)) + 1):
+            if n % i == 0:
+                return False
+        return True
+obj = Solution_prime()
+# print(obj.isPrime(2))
+
+# 2nd approach 
+class SolutionPrime2:
+    def isPrime(self, n: int) -> bool:
+        count = 0
+        if n <= 1:
+            return False
+        for i in range(2, int(sqrt(n)) + 1):
+            if n % i == 0:
+                count += 1
+        return count == 0
+obj = SolutionPrime2()
+print(obj.isPrime(32))
