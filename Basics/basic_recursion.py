@@ -39,3 +39,29 @@ class Solution_Sum:
         return self.fun(num-1, sum+num)
 obj = Solution_Sum()
 print(obj.fun(100, 0))
+print()
+
+# 5. Factorial of a number using Recursion
+class Solution_Factorial:
+    def factorial(self, n: int) -> int:
+        if n < 0:
+            return -1  # Factorial is not defined for negative numbers
+        if n == 0 or n == 1:
+            return 1
+        return n * self.factorial(n-1)
+obj = Solution_Factorial()
+print(obj.factorial(5))
+print()
+
+# 2nd method
+class Solution_fact:
+    def fun(self, n:int, fact:int) -> None:
+        if n<0:
+            print("Enter Positive Number")
+            return # To stop function
+        else:
+            if n==0:
+                return fact
+            return self.fun(n-1, fact*n)
+obj = Solution_fact()
+print(obj.fun(5, 1))
