@@ -65,3 +65,19 @@ class Solution_fact:
             return self.fun(n-1, fact*n)
 obj = Solution_fact()
 print(obj.fun(5, 1))
+
+
+# 6. Check if a string is palindrome or not 
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = ''.join(c.lower() for c in s if c.isalnum())
+        left = 0 
+        right = len(s) - 1
+
+        while left < right:
+            if s[left] != s[right]:
+                return False
+            left += 1
+            right -= 1
+
+        return True
