@@ -96,3 +96,17 @@ class Solution_Fib:
             return self.fib(n-1) + self.fib(n-2)
 obj = Solution_Fib()
 print(obj.fib(10))
+print()
+# Fibonacci Series without Recursion
+
+class Fibonacci:
+    def find_fibb(self, num:int)->int:
+        a,b=0,1
+        print(a)
+        for _ in range(num):
+            sum=a+b 
+            print(sum)
+            a=b 
+            b=sum
+obj = Fibonacci()
+obj.find_fibb(9)
