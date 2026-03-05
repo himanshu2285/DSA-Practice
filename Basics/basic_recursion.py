@@ -109,4 +109,19 @@ class Fibonacci:
             a=b 
             b=sum
 obj = Fibonacci()
-obj.find_fibb(9)
+obj.find_fibb(2)
+print()
+
+# OR Leetcode Solution
+class Solution(object):
+    def fib(self, n):
+        if n == 0:
+            return 0
+        if n == 1:
+            return 1
+        a, b = 0, 1
+        for _ in range(2, n + 1):
+            a, b = b, a + b
+        return b
+obj = Solution()
+print(obj.fib(4))
