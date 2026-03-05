@@ -81,3 +81,18 @@ class Solution:
             right -= 1
 
         return True
+obj = Solution()
+print(obj.isPalindrome("A man, a plan, a canal: Panama"))
+
+
+# 7. Fibonacci Series using Recursion
+class Solution_Fib:
+    def fib(self, n: int) -> int:
+        if n <= 0:
+            return 0
+        elif n == 1:
+            return 1
+        else:
+            return self.fib(n-1) + self.fib(n-2)
+obj = Solution_Fib()
+print(obj.fib(10))
