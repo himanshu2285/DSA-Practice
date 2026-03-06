@@ -125,3 +125,18 @@ class Solution(object):
         return b
 obj = Solution()
 print(obj.fib(4))
+print()
+
+
+
+# 8. Reverse a list without recursion
+class ReverseList:
+    def reverse(self, lst):
+        left, right = 0, len(lst) - 1
+        while left < right:
+            lst[left], lst[right] = lst[right], lst[left]
+            left += 1
+            right -= 1
+        return lst
+obj = ReverseList()
+print(obj.reverse([1, 2, 3, 4, 5]))
