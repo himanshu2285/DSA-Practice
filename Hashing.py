@@ -1,6 +1,7 @@
+## Hashing Technique in Python(For integer numbers)
+
 # Read size of array
 n = int(input())
-
 # Read array elements
 arr = list(map(int, input().split()))
 
@@ -17,6 +18,9 @@ print("Query results:")
 # Process each query
 while q > 0:
     number = int(input())
-    print(hash_arr[number])
+    print(number, "->", hash_arr[number])
     q -= 1
     
+    
+    
+## Hashing Technique in Python(For string)
