@@ -340,11 +340,64 @@ fun()'''
 
 
 
+# check whether list is homogeneous or not
+'''def check_list(lst):
+    first_type=type(lst[0])
+    for i in lst:
+        if type(i)!=first_type:
+            return False
+    return True
+
+l=['s',2,3,5]
+print(check_list(l))'''
+
+
+# WAP to convert the string into upper case without arg and return value
+'''def convert_upper():
+    s=input("Enter a string : ")
+    print(s.upper())
+convert_upper()'''
+
+'''def convert_upper():
+    s=input("Enter a string : ")
+    result=''
+    for i in s:
+        if 'a'<=i<='z':
+            result+=chr(ord(i)-32)
+        else:
+            result+=i
+    print(result)
+convert_upper()'''
+
+
+# Global and Local Variable
+'''a=10 
+b=20
+def outer():
+    c=200
+    print(c)   # local var access
+    def inner():
+        nonlocal c  # we can't modify local variable in inner function without nonlocal keyword
+        c=c+100
+        print(c)
+    inner()
+    global a
+    a=a+10
+    print(a)
+outer()
+print(b)'''
+
+
+
+'''IN = "Always keep smilling"
+res=''
+for i in IN.split():
+    rev=''
+    for j in i:
+        rev=j+rev
+    res+=rev+' '
+print(res)'''
 
 
 
 
-
-
-
-    
