@@ -18,7 +18,23 @@ else:
     print(n,"is not a prime number.")
 '''
 
+# Sum of prime numbers in the list
+'''def check_prime(n):
+    if n<=1:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n%i==0:
+            return False
+    return True
 
+num = [2,12,13,14,37,59]
+total = 0
+for n in num:
+    if check_prime(n):
+        total+=n
+    else:
+        continue
+print(total)'''
 
 
 # Factorial Number
@@ -263,6 +279,8 @@ for i in words:
     res[i]=count
 print(res)
 '''
+
+
 # Now just print total vowel
 # out = {'power':2, 'star':1}
 '''res={}
@@ -397,6 +415,72 @@ for i in IN.split():
         rev=j+rev
     res+=rev+' '
 print(res)'''
+
+
+
+# Types of Arguments:
+'''
+    Arguments are 4 types in Python:
+    1. positional arguments
+    2. Default arguments
+    3. Keyword arguments
+    4. Variable length arguments
+    
+    
+    1. Positional Arguments:
+        These arguments are present in formal argument section. It is compulsory to follow the same order and
+        compulsory to pass the value for these arguments.
+        
+        def fun(a,b,c=0, d=0):  # Here a and b are positional arguments
+            // block of code
+        fun(10,20,30)
+        
+    2. Default Arguments:
+        These are the value assigned to the variable, so while calling the function if 
+        we don't pass the value for these arguments then it will take the default value.
+        
+        # Above example a and d are default arguments
+    
+'''
+
+
+'''def fname(name, phone, email, city='Mumbai'):
+    print("Name : ", name)
+    print("Phone : ", phone)
+    print("Email : ", email)
+    print("City : ", city)
+
+fname('Yash', 1234567890, 'yash@example.com')'''
+
+
+#########  Important  #########
+# Add minimum 2 numbers and maximum 5 numbers
+# 1st Way
+'''def add(a,b,c=0,d=0,e=0):
+    return a+b+c+d+e
+print(add(1,2))
+print(add(1,2,3,4,5))'''
+
+# 2nd Way
+'''def add_numbers(*args):
+    if len(args) < 2:
+        return "At least 2 numbers are required"
+    if len(args) > 5:
+        return "Maximum 5 numbers are allowed"
+    return sum(args)
+
+print(add_numbers(1, 2))
+print(add_numbers(1, 2, 3, 4, 5))'''
+
+
+# Find the product of minimum 3 numbers and maximum 5 numbers
+'''def find_product(p1, p2, p3, p4=1, p5=1):
+    return p1 * p2 * p3 * p4 * p5
+print(find_product(2, 3, 4))
+print(find_product(2, 3, 4, 5))'''
+
+
+
 
 
 
