@@ -484,17 +484,24 @@ print(find_product(2, 3, 4, 5))'''
 
 
 ###### Logical Programs for Interview  ######
-# Count occurance of each character in the string
-'''name = "My name is Avinash"
+# 1. Count occurance of each character in the string
+name = "My name is Avinash"
 name=name.lower()
+
+# 1st method
 count={}
 for ch in name:
     if ch in count:
         count[ch]+=1
     else:
         count[ch]=1
-print(count)'''
+print(count)
 
+#2nd method
+count={}
+for ch in name:
+    count[ch]=count.get(ch, 0) + 1
+print(count)
 
 
 
