@@ -505,3 +505,23 @@ print(count)
 
 
 
+# 2. First Unique Character in a String (387)
+
+# Input: s = "leetcode"    Output: 0
+# Input: s = "loveleetcode"   Output: 2
+# Input: s = "aabb"       Output: -1
+
+def first_unique(s: str)->int:
+    res={}
+    # count frequency of chars
+    for ch in s:
+        res[ch]=res.get(ch, 0)+1
+    
+    # checking which char has value 1
+    for i, val in enumerate(s):
+        if res[val]==1:
+            return i
+    return -1
+
+s = "aabb"
+print(first_unique(s))
