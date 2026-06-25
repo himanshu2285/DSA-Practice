@@ -40,4 +40,3 @@ def missing_number(nums):
             return i
     return len(nums)
 print(missing_number(nums))
-    
