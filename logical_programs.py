@@ -525,3 +525,20 @@ def first_unique(s: str)->int:
 
 s = "aabb"
 print(first_unique(s))
+
+
+# 344. Reverse String -> modify existing list[str]
+from typing import List
+def reverse_str(s: List[str]) -> None:
+    # 1st way
+    s[:]=s[::-1]
+    
+    # 2nd way
+    left=0
+    right=len(s)-1
+    while (left < right):
+        s[left], s[right] = s[right], s[left]
+        left+=1
+        right-=1
+    
+
