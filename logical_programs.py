@@ -527,7 +527,7 @@ s = "aabb"
 print(first_unique(s))
 
 
-# 344. Reverse String -> modify existing list[str]
+# 3. (344) Reverse String -> modify existing list[str]
 from typing import List
 def reverse_str(s: List[str]) -> None:
     # 1st way
@@ -542,3 +542,16 @@ def reverse_str(s: List[str]) -> None:
         right-=1
     
 
+# 4. move zero at the end
+def move_zero():
+    lst = [0,1,0,5,2,0,1,0,]
+    left, right = 0, 0
+    while right < len(lst):
+        if lst[right]==0:
+            right+=1
+        else:
+            lst[left], lst[right] = lst[right], lst[left]
+            left+=1
+            right+=1
+    return lst
+print(move_zero())
