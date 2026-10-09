@@ -1,50 +1,49 @@
 import sys
 
-n = 5
-st = [None] * n
 top = -1
+size = 6
+stack = [None]*size # hashmap
 
 while True:
-    print('\n1. Push')
-    print('2. Pop')
-    print('3. Display')
-    print('4. Exit')
+    print('''
+        1. Push into stack
+        2. Pop from stack
+        3. Display stack
+        4. Exit''')
     
-    try:
-        num = int(input("Choose Operation : "))
-
-        match num:
-            case 1:
-                if top == n-1:
-                    print("Stack is already full, OverFlow condition!")
+    try: 
+        operation = eval(input("Choose a operation : "))
+        match operation:
+            case 1: # push opn
+                if top==size-1:
+                    print("Stack is full, Stack overflow condition")
                 else:
-                    data = int(input("Enter value to push : "))
+                    number = int(input("Enter the number to insert : "))
                     top += 1
-                    st[top] = data
-                    print("Inserted succesfully")
+                    stack[top]=number
+                    print("Inserted successfully")
             
-            case 2:
+            case 2: #pop opn
                 if top == -1:
-                    print("Stack is empty, Underflow condition!")
+                    print("Stack is empty, Underflow condition")
                 else:
-                    data = st[top]
-                    st[top] = None
+                    data = stack[top]
+                    stack[top] = None
                     top -= 1
-                    print(data, "Successfully removed.")
+                    print(f"{data} deleted successfully from stack")
             
             case 3:
                 if top == -1:
-                    print("stack is empty, can't display elements")
+                    print("stack is empty")
                 else:
-                    print("Stack : ",st)
+                    print(f"Stack : {stack}")
             
             case 4:
                 print("Exiting...")
                 sys.exit()
-            
+                
             case _:
-                print("Choose valid option")
+                print("Enter valid option.")
     
-    except Exception:
-        print("Operation terminated! Not choose valid options")
-        sys.exit()
+    except NameError as e:
+        print("I think! you have entered wrong option {e}")
